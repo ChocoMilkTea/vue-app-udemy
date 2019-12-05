@@ -1,4 +1,4 @@
-# testing-app-vue
+# vue-app-udemy
 
 ## Project setup
 ```
