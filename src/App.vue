@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <p>{{ sayHello() }}</p>
+    <p>
+      {{ sayHello() }} - <a v-bind:href="link">Google</a>
+    </p>
   </div>
 </template>
 
@@ -8,7 +10,8 @@
   export default {
     name: 'app',
     data: () => ({
-      title: 'Hello World!'
+      title: 'Hello World!',
+      link: 'http://www.google.com'
     }),
     methods: {
       sayHello() {
