@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-on:click="increase">Click Me</button>
+    <button v-on:click="increase(2, $event)">Click Me</button>
     <p>{{ counter }}</p>
     <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
   </div>
@@ -18,8 +18,9 @@
       y: 0
     }),
     methods: {
-      increase() {
-        this.counter++;
+      increase(step, event) {
+        this.counter += step;
+        event; // Not in use. Just to stop the error from appearing.
       },
       updateCoordinates(event) {
         this.x = event.clientX;
