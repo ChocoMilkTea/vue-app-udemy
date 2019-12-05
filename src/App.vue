@@ -1,28 +1,20 @@
 <template>
   <div id="app">
-    <h1 v-once>{{ title }}</h1>
-    <p>      
-      {{ sayHello() }} - <a v-bind:href="link">Google</a>
-    </p>
+    <GettingStarted/>    
     <hr>
-    <p v-html="finishedLink"></p>
+    <Assignment1/>
   </div>
 </template>
 
 <script>
+  import GettingStarted from '@/components/GettingStarted.vue';
+  import Assignment1 from '@/components/Assignment1.vue';
+
   export default {
     name: 'app',
-    data: () => ({
-      title: 'Hello World!',
-      link: 'http://www.google.com',
-      finishedLink: '<a href="http://google.com">Google</a>'
-    }),
-    methods: {
-      sayHello() {
-        this.title = 'Hello!';
-        return this.title;
-      }
+    components: {
+      GettingStarted,
+      Assignment1
     }
   }
-  
 </script>
