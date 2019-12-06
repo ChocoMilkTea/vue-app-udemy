@@ -11,7 +11,6 @@
         </v-card>
       </v-col>
     </v-row>
-
     <v-row>
       <v-col>
         <v-card dark>
@@ -25,7 +24,6 @@
         </v-card>
       </v-col>
     </v-row>
-
     <v-row>
       <v-col>
         <v-card dark>
@@ -36,8 +34,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-    </v-row>        
-    
+    </v-row>            
   </div>  
 </template>
 
