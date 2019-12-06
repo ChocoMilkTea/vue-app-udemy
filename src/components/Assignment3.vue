@@ -3,8 +3,8 @@
     <div 
       class="demo" 
       @click="attachRed = !attachRed" 
-      :class="{red: attachRed}"></div>
-    <div class="demo"></div>
+      :class="divClasses"></div>
+    <div class="demo" :class="{red: attachRed}"></div>
     <div class="demo"></div>
   </div>  
 </template>
@@ -37,6 +37,14 @@
     name: 'Assignment3',
     data: () => ({
       attachRed: false
-    })
+    }),
+    computed: {
+      divClasses() {
+        return {
+          red: this.attachRed,
+          blue: !this.attachRed
+        }
+      }
+    }
   }
 </script>
