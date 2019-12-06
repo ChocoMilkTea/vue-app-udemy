@@ -12,6 +12,25 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col>
+        <v-card dark>
+          <v-card-title>Task 2</v-card-title>
+          <v-card-subtitle>Reacting to changes with computed properties</v-card-subtitle>
+          <v-card-text>
+            <p>Counter: {{ counter }}</p>
+            <p>Second Counter: {{ secondCounter }}</p>
+            <p>Result: {{ displayResult() }} | {{ output }}</p>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn v-on:click="counter++">Increase</v-btn>
+            <v-btn v-on:click="counter--">Decrease</v-btn>
+            <v-btn v-on:click="secondCounter++">Increase Second</v-btn>
+            <v-btn v-on:click="reset">Reset</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
   
 </template>
@@ -20,8 +39,30 @@
   export default {
     name: 'Assignment2',
     data: () => ({
-      name: 'Thanos'
-    })
+      name: 'Thanos',
+      counter: 0,
+      secondCounter: 0,
+      result: ''
+    }),
+    computed: {
+      // for caching result
+      output() {
+        console.log('computed');
+        return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+      }
+    },
+    methods: {
+      // for calling every changes
+      displayResult() {
+        console.log('method');
+        return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+      },
+      reset() {
+        this.counter = 0;
+        this.secondCounter = 0;
+        this.result = '';
+      }
+    }
   }
 </script>
 
