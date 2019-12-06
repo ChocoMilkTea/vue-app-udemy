@@ -1,12 +1,24 @@
 <template>
   <div>
-    <div 
-      class="demo" 
-      @click="attachRed = !attachRed" 
-      :class="divClasses"></div>
-    <div class="demo" :class="{red: attachRed}"></div>
-    <div class="demo"></div>
-  </div>  
+    <v-row>
+      <v-col>
+        <v-card dark>
+          <v-card-title>Task 1</v-card-title>
+          <v-card-subtitle>Dynamic styling</v-card-subtitle>          
+          <v-card-actions>
+            <div 
+              class="demo" 
+              @click="attachRed = !attachRed" 
+              :class="divClasses"></div>
+            <div class="demo" :class="{red: attachRed}"></div>
+            <div class="demo" :class="[color, {red: attachRed}]"></div>
+            <v-spacer></v-spacer>
+            <v-text-field v-model="color"></v-text-field>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>    
+  </div>
 </template>
 
 <style>
@@ -31,12 +43,12 @@
   }
 </style>
 
-
 <script>
   export default {
     name: 'Assignment3',
     data: () => ({
-      attachRed: false
+      attachRed: false,
+      color: 'green'
     }),
     computed: {
       divClasses() {
