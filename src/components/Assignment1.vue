@@ -6,8 +6,10 @@
           <v-card-title>Task 1</v-card-title>
           <v-card-subtitle>Counter to increase on click</v-card-subtitle>
           <v-card-text>
-            <v-btn v-on:click="increase(2, $event)">Click Me</v-btn>
+            <v-btn v-on:click="increase(2, $event)">Click Me (Custom)</v-btn>
+            <v-btn v-on:click="counter++">Click Me (Incremental)</v-btn>
             <p>Counter: {{ counter }}</p>
+            <p>Counter: {{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
           </v-card-text>
         </v-card>
       </v-col>

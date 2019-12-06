@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-container fluid>
+  <v-app>      
+    <v-container fluid>      
       <v-tabs>
         <v-tab>Getting Started</v-tab>
           <v-tab-item>
@@ -12,7 +12,7 @@
           </v-tab-item>
         <v-tab>Assignment 2</v-tab>
           <v-tab-item>
-            Nothing Yet
+            <Assignment2/>
           </v-tab-item>
       </v-tabs>    
       
@@ -24,12 +24,14 @@
 <script>
   import GettingStarted from '@/components/GettingStarted'
   import Assignment1 from '@/components/Assignment1'
-
+  import Assignment2 from '@/components/Assignment2'
+  
   export default {
     name: 'App',
     components: {
       GettingStarted,
-      Assignment1
+      Assignment1,
+      Assignment2
     }    
   }
   
