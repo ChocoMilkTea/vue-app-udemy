@@ -16,7 +16,7 @@
       <v-col>
         <v-card dark>
           <v-card-title>Task 2</v-card-title>
-          <v-card-subtitle>Reacting to changes with computed properties</v-card-subtitle>
+          <v-card-subtitle>Reacting to changes with computed/watch properties</v-card-subtitle>
           <v-card-text>
             <p>Counter: {{ counter }}</p>
             <p>Second Counter: {{ secondCounter }}</p>
@@ -27,6 +27,18 @@
             <v-btn v-on:click="counter--">Decrease</v-btn>
             <v-btn v-on:click="secondCounter++">Increase Second</v-btn>
             <v-btn v-on:click="reset">Reset</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <v-card dark>
+          <v-card-title>Task 3</v-card-title>
+          <v-card-subtitle>Saving Time with shorthands</v-card-subtitle>          
+          <v-card-actions>
+            <v-btn @click="changeLink">Click to change link</v-btn>
+            <a :href="link">Link</a>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -42,7 +54,8 @@
       name: 'Thanos',
       counter: 0,
       secondCounter: 0,
-      result: ''
+      result: '',
+      link: 'http://google.com'
     }),
     computed: {
       // for caching result
@@ -74,6 +87,9 @@
         this.counter = 0;
         this.secondCounter = 0;
         this.result = '';
+      },
+      changeLink() {
+        this.link = 'http://apple.com'
       }
     }
   }
