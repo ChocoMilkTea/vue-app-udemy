@@ -43,8 +43,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </div>
-  
+  </div>  
 </template>
 
 <script>
