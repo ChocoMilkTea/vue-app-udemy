@@ -46,9 +46,22 @@
     }),
     computed: {
       // for caching result
+      // best practise
+      // more optimised
       output() {
         console.log('computed');
         return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+      }
+    },
+    watch: {
+      // good for aync
+      counter(value) {
+        var vm = this;
+        if (value > 10) {
+          setTimeout(function() {
+            vm.counter = 0;
+          }, 2000);
+        }
       }
     },
     methods: {
