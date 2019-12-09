@@ -7,8 +7,12 @@
         <v-card-text>
           <p v-if="show">You can see me!<span>Hello!</span></p>
           <p v-else-if="abc">Now you see me!</p>
-          <p v-else>Only now you see me!</p>
+          <p v-else>Only now you see me!</p>          
           <p>Do you also see me?</p>
+          <template v-if="show">
+            <h1>Heading</h1>
+            <p>Inside a template</p>
+          </template>
         </v-card-text>
         <v-card-actions>
           <v-btn @click="show = !show">Switch</v-btn>
