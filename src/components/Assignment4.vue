@@ -30,6 +30,17 @@
             <ul>
               <li v-for="(ingredient, i) in ingredients" v-bind:key ="ingredient">{{ ingredient }} ({{ i }})</li>
             </ul>
+            <hr>
+              <li v-for="person in persons" v-bind:key="person">
+                <div v-for="(value, key, index) in person" v-bind:key="value">
+                  {{ key }}: {{ value }} ({{ index }})
+                </div>
+              </li>
+            <hr>
+            <div v-for="(ingredient, index) in ingredients" v-bind:key="ingredient">
+              <h1>{{ ingredient }}</h1>
+              <p>{{ index }}</p>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
