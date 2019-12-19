@@ -8,7 +8,7 @@
           <p v-if="show">You can see me!<span>Hello!</span></p>
           <p v-else-if="abc">Now you see me!</p>
           <p v-else>Only now you see me!</p>          
-          <p>Do you also see me?</p>
+          <p v-show="show">Do you also see me?</p>
           <template v-if="show">
             <h1>Heading</h1>
             <p>Inside a template</p>
