@@ -36,6 +36,7 @@
                   {{ key }}: {{ value }} ({{ index }})
                 </div>
               </li>
+              <span v-for="n in 10" v-bind:key="n">{{ n }}</span>
             <hr>
             <div v-for="(ingredient, index) in ingredients" v-bind:key="ingredient">
               <h1>{{ ingredient }}</h1>
