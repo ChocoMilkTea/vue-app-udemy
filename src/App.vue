@@ -27,6 +27,10 @@
                 </v-tab-item>
             </v-tabs>    
           </v-tab-item>
+        <v-tab>Monster Slayer</v-tab>
+          <v-tab-item>
+            
+          </v-tab-item>
         <v-tab>Testing Playground</v-tab>
           <v-tab-item>
             <Playground/>
