@@ -30,6 +30,7 @@
             <ul>
               <li v-for="(ingredient, i) in ingredients" v-bind:key ="ingredient">{{ ingredient }} ({{ i }})</li>
             </ul>
+            <v-btn @click="ingredients.push('spices')">Add New</v-btn>
             <hr>
               <li v-for="person in persons" v-bind:key="person">
                 <div v-for="(value, key, index) in person" v-bind:key="value">
